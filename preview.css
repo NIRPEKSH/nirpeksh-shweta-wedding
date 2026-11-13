@@ -1,0 +1,60 @@
+/* Concept 2 is an isolated review version. No changes to the approved site. */
+.concept-label{position:absolute;top:34px;left:45px;font:8px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#8d7149;z-index:2;background:#faf5ebbb;padding:5px 8px}
+.concept-label span{padding:0 3px}
+.opening .shankh-button{margin:8px 0 0;padding:0 12px 8px;filter:none}
+.shankh-symbol{width:145px;height:96px;object-fit:contain;display:block;filter:drop-shadow(0 4px 7px #a17e4830);transition:transform .5s,filter .5s}
+.shankh-button:hover .shankh-symbol{transform:translateY(-3px);filter:drop-shadow(0 5px 12px #b48f5966)}
+.opening .shankh-button>span{font:italic 22px var(--serif);color:var(--wine);margin-top:0}
+.opening .shankh-button small{font-size:7px;letter-spacing:.065em;margin-top:8px}
+.opening.is-ringing .shankh-symbol{animation:shankh-awakening 1.1s ease both}
+@keyframes shankh-awakening{0%{transform:scale(1);filter:drop-shadow(0 3px 8px #b9934433)}45%{transform:scale(1.06);filter:drop-shadow(0 0 24px #e9c577)}100%{transform:scale(1);filter:drop-shadow(0 0 10px #d7b65f80)}}
+.family-message{margin:0 auto 27px;max-width:370px;font-size:13px;line-height:1.9}
+.family-date{margin:0 auto 26px;font-size:10px}
+.voice-note{max-width:340px;margin:19px auto 0;font-size:10px;line-height:1.7;color:#836b50;text-align:center}
+.voice-note summary{cursor:pointer;text-decoration:underline;text-decoration-color:#ad926866;text-underline-offset:4px;font-size:9px;letter-spacing:.025em;list-style:none}
+.voice-note summary::before{content:'ⓘ';margin-right:7px;text-decoration:none}
+.voice-note[open] summary{margin-bottom:9px}
+.voice-note p{font-size:10px;line-height:1.8;background:#e4d3b633;border:1px solid #b0956244;padding:12px 15px}
+.sacred-inscription{font-family:Georgia,serif;font-size:56px;line-height:1.7;color:var(--wine);margin:28px 0 5px;white-space:nowrap;letter-spacing:.03em}
+.inscription-caption{font:italic 23px var(--serif);color:#926b39;margin:0 0 26px}
+.welcome .wedding-verse{font:19px/2 Georgia,serif!important;color:#65593e!important;margin:32px auto 18px;letter-spacing:.015em;max-width:720px}
+.welcome .verse-meaning{font:italic 25px/1.4 var(--serif)!important;color:var(--wine)!important;margin:18px auto}
+.welcome .verse-source{font:9px var(--sans)!important;letter-spacing:.12em;text-transform:uppercase;color:#6b755b!important;margin-top:26px}
+.closing .family-signature{font:italic 28px var(--serif);color:#dfbf8d;margin:29px auto}
+.event{box-shadow:0 15px 40px #24121a22,inset 0 0 0 5px #e9cf9b05}
+.event::after{content:'';position:absolute;inset:8px;border:1px solid #d8bb7e22;pointer-events:none}
+.welcome h2{line-height:1.12}
+.hero-copy{box-shadow:0 15px 40px #602b3c22}
+.hero-copy::after{content:'';position:absolute;inset:17px;border:1px solid #d9be8526;pointer-events:none;z-index:-1}
+.venue-arch{box-shadow:inset 0 0 55px #d0b47112}
+.wordmark i{font-style:normal}
+
+@media(max-width:900px){.sacred-inscription{font-size:43px}.inscription-caption{font-size:21px}}
+@media(max-width:600px){
+ .concept-label{top:26px;left:23px;font-size:6px;letter-spacing:.05em;padding:4px 5px}
+ .cover-music{right:23px;font-size:8px}
+ .opening .shankh-button{margin-top:8px}
+ .shankh-symbol{width:129px;height:86px}
+ .opening .shankh-button>span{font-size:20px}
+ .opening .shankh-button small{font-size:6.3px;letter-spacing:.025em}
+ .family-message{font-size:12px;margin-bottom:24px;max-width:280px}
+ .family-date{font-size:9px;margin-bottom:22px}
+ .voice-note{max-width:280px;margin-top:18px}
+ .voice-note summary{font-size:8px}
+ .sacred-inscription{font-size:43px;margin-top:20px;line-height:1.7}
+ .inscription-caption{font-size:21px;margin-bottom:20px}
+ .welcome .wedding-verse{font-size:15px!important;line-height:2.1!important;margin-top:28px;max-width:330px}
+ .welcome .verse-meaning{font-size:24px!important}
+ .welcome .verse-source{font-size:8px!important;letter-spacing:.08em}
+ .closing .family-signature{font-size:25px}
+}
+@media(max-width:360px){.opening .shankh-button>span{font-size:18px}.shankh-symbol{width:115px;height:77px}.sacred-inscription{font-size:36px}.concept-label{font-size:5.5px;left:20px}}
+@media(max-height:700px){.opening .shankh-symbol{width:112px;height:72px}.opening .shankh-button>span{font-size:19px}.opening .shankh-button small{font-size:6px}.opening .shankh-button{margin-top:2px}}
+@media(prefers-reduced-motion:reduce){.opening.is-ringing .shankh-symbol{animation:none}.shankh-button:hover .shankh-symbol{transform:none}.shankh-symbol{transition:none}}
+.sound-mark{width:15px;height:15px;color:var(--wine);flex-shrink:0}
+.audio-meaning{max-width:345px;margin:26px auto 0;border-top:1px solid #b69b6544;padding:18px 10px 0;text-align:center}
+.audio-meaning .eyebrow{font-size:7px;letter-spacing:.15em;color:#8b6f3e;margin-bottom:9px}
+.audio-meaning>p:nth-child(2){font:italic 22px/1.3 var(--serif);color:var(--wine)}
+.audio-meaning>p:nth-child(3){font:12px/1.8 Georgia,serif;color:#957844;margin-top:9px}
+.voice-note a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){.audio-meaning{max-width:270px;margin-top:17px;padding:14px 0 0}.audio-meaning>p:nth-child(2){font-size:20px}.audio-meaning>p:nth-child(3){font-size:11px}.audio-meaning .eyebrow{font-size:6px}}

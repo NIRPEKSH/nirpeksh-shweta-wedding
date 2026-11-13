@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#632d3e">
+  <meta name="description" content="With love, Nirpeksh Tomar & Shweta Bais invite you to their wedding and reception. 25 January 2027 · Goel Regency, Pilkhuwa.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nirpeksh.github.io/nirpeksh-shweta-wedding/">
+  <link rel="canonical" href="https://nirpeksh.github.io/nirpeksh-shweta-wedding/">
+  <meta property="og:title" content="Nirpeksh & Shweta · You're invited">
+  <meta property="og:description" content="Two families. A new beginning. Join us for our wedding & reception · 25 January 2027 · Goel Regency, Pilkhuwa.">
+  <meta property="og:image" content="https://nirpeksh.github.io/nirpeksh-shweta-wedding/assets/share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <title>Nirpeksh & Shweta · Wedding invitation</title>
+  <link rel="icon" type="image/svg+xml" href="assets/crest.svg">
+  <link rel="preload" href="assets/heritage.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="rich.css">
+  <link rel="stylesheet" href="preview.css">
+  <link rel="stylesheet" href="royal.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="config.js" defer></script>
+  <script src="opening.js" type="module"></script>
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+  <a href="#invitation" class="skip-link">Skip to invitation</a>
+  <div class="opening" id="opening" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="opening-title">
+    <div class="opening-sheet">
+    <div class="opening-art" aria-hidden="true"></div>
+    <div class="opening-frame" aria-hidden="true"></div>
+    <button class="music-button cover-music" data-music aria-pressed="false"><svg class="sound-mark" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 8h3l4-3v10l-4-3H3V8Zm10-1c2 2 2 4 0 6m2-8c3 3 3 7 0 10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-music-label>Play audio</span></button>
+    <div class="opening-content">
+      <p class="sacred" lang="hi">॥ श्री गणेशाय नमः ॥</p>
+      <p class="eyebrow">The Tomar & Bais families invite you</p>
+      <h1 id="opening-title"><span>Nirpeksh</span><i>&</i><span>Shweta</span></h1>
+      <p class="opening-date">25 <span>JANUARY</span> 2027</p>
+      <p class="opening-guest" data-guest>To our dear family & friends</p>
+      <button class="bell-button shankh-button" id="shankh-open" aria-label="Sound the shankh and open the invitation">
+        <img class="shankh-symbol" src="assets/shankh.png" alt="" width="420" height="280">
+        <span>Begin with a blessing</span>
+        <small>Tap the shankh to open your invitation</small>
+      </button>
+      <button class="text-button quiet" id="quiet">Open quietly <span aria-hidden="true">↗</span></button>
+    </div>
+    </div>
+  </div>
+
+  <div class="reveal-effects" id="reveal-effects" aria-hidden="true"></div>
+  <div class="blessing" id="blessing" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="blessing-title" aria-describedby="family-invitation" hidden>
+    <div class="blessing-sheet">
+    <div class="blessing-frame" aria-hidden="true"></div>
+    <div class="blessing-topline"><span class="eyebrow">Welcome</span><button class="music-button" data-music aria-pressed="false"><span class="music-bars" aria-hidden="true"><b></b><b></b><b></b></span><span data-music-label>Play audio</span></button></div>
+    <div class="blessing-layout">
+      <div class="ganesh-sanctuary">
+        <div class="sanctuary-halo" aria-hidden="true"></div>
+        <img class="ganesh-art" src="assets/ganesh-blessing.jpg" alt="A devotional watercolour of Shri Ganesh seated on a lotus with his hand raised in blessing" width="1024" height="1024" decoding="async">
+        <p class="blessing-mantra" lang="hi">॥ ॐ श्री गणेशाय नमः ॥</p>
+        <p class="sanctuary-caption">With Shri Ganesh’s blessings</p>
+        <div class="audio-meaning"><p class="eyebrow">The prayer</p><p id="blessing-meaning">A prayer for an auspicious beginning.</p><p id="blessing-meaning-hindi" lang="hi">मंगलमय जीवन की प्रार्थना</p></div>
+      </div>
+      <div class="family-invitation" id="family-invitation">
+        <p class="eyebrow">An invitation from our families</p>
+        <h2 id="blessing-title"><span>The Tomar & Bais families</span>would love you<br><em>to join us.</em></h2>
+        <div class="fine-rule" aria-hidden="true"><span>✧</span></div>
+        <p class="blessing-guest" data-guest>To our dear family & friends</p>
+        <p class="family-message">Please join us for the wedding and reception. We look forward to welcoming you, sharing a meal, and celebrating together.</p>
+        <p class="family-date">25 January 2027 <span>·</span> Goel Regency, Pilkhuwa</p>
+        <button class="button button-wine" id="continue-invitation">View the invitation <span aria-hidden="true">→</span></button>
+        <details class="voice-note"><summary>Prayer & music</summary><p>Vivāha Maṅgalāṣṭakam, verses 1–2, recited by Prathosh A P. <a href="audio-credits.html" target="_blank" rel="noopener noreferrer">Audio credits and sources ↗</a></p></details>
+      </div>
+    </div>
+    <p class="music-status" id="music-status" role="status"></p>
+    </div>
+  </div>
+
+  <div id="site">
+    <header class="header">
+      <a href="#invitation" class="wordmark" aria-label="Nirpeksh and Shweta, back to invitation">N <i>&</i> S<span>25 JANUARY 2027</span></a>
+      <nav aria-label="Invitation"><a href="#celebration">The celebration</a><a href="#venue">The venue</a><button class="music-button" data-music aria-pressed="false"><span class="music-bars" aria-hidden="true"><b></b><b></b><b></b></span><span data-music-label>Play audio</span></button></nav>
+    </header>
+
+    <main id="invitation" tabindex="-1">
+      <section class="hero" aria-labelledby="couple-title">
+        <div class="hero-copy">
+          <p class="sacred" lang="hi">॥ श्री गणेशाय नमः ॥</p>
+          <p class="eyebrow">Together with our families</p>
+          <h1 id="couple-title" class="couple"><span>Nirpeksh <small>Tomar</small></span><i>&</i><span>Shweta <small>Bais</small></span></h1>
+          <div class="fine-rule" aria-hidden="true"><span>✧</span></div>
+          <p class="hero-invite">Please join us<br>for our wedding and reception.</p>
+          <p class="hero-date">Monday, 25 January 2027</p>
+          <p class="hero-location" data-venue-short>Goel Regency · Pilkhuwa</p>
+          <a href="#celebration" class="button button-wine">Wedding details <span aria-hidden="true">↓</span></a>
+        </div>
+        <figure class="hero-art couple-art">
+          <img src="assets/royal-couple.jpg" alt="A bride and groom, seen from behind beneath a floral arch, in ivory and wine wedding clothes." width="1024" height="1536" decoding="async">
+          <figcaption><span lang="hi">शुभ विवाह</span><span>With love, from both our families.</span></figcaption>
+        </figure>
+        <a class="scroll-note" href="#welcome">Wedding details below <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="welcome section" id="welcome" aria-labelledby="welcome-title">
+        <span class="welcome-floral floral-left" aria-hidden="true"></span><span class="welcome-floral floral-right" aria-hidden="true"></span>
+        <span class="ornament" aria-hidden="true">❦</span>
+        <p class="eyebrow">A wedding blessing</p>
+        <h2 id="welcome-title">With your love<br><em>and blessings.</em></h2>
+        <p class="wedding-verse" lang="sa">समञ्जन्तु विश्वे देवाः समापो हृदयानि नौ।<br>सं मातरिश्वा सं धाता समु देष्ट्री दधातु नौ॥</p>
+        <p class="verse-meaning">A prayer that we may live together<br>with love and understanding.</p>
+        <p class="verse-source">Wedding blessing · Rigveda 10.85.47</p>
+        <p id="guest-status" class="status" role="status" hidden></p>
+      </section>
+
+      <section class="celebration section" id="celebration" aria-labelledby="celebration-title">
+        <svg class="wedding-toran" viewBox="0 0 600 70" fill="none" aria-hidden="true"><defs><g id="toran-leaf"><path d="M0 0Q18 15 0 42Q-18 15 0 0Z" fill="#7c8d68" stroke="#d2b47b" stroke-width=".8"/><path d="M0 3V36" stroke="#d2b47b" stroke-width=".7"/></g><g id="toran-flower"><circle r="7" fill="#c9a056"/><circle r="3" fill="#e9c993"/></g></defs><path d="M10 10Q155 65 300 10Q445 65 590 10" stroke="#d8b87f" stroke-width="1.5"/><use href="#toran-leaf" x="45" y="22"/><use href="#toran-leaf" x="105" y="35"/><use href="#toran-leaf" x="165" y="38"/><use href="#toran-leaf" x="225" y="30"/><use href="#toran-leaf" x="375" y="30"/><use href="#toran-leaf" x="435" y="38"/><use href="#toran-leaf" x="495" y="35"/><use href="#toran-leaf" x="555" y="22"/><use href="#toran-flower" x="75" y="29"/><use href="#toran-flower" x="135" y="37"/><use href="#toran-flower" x="195" y="36"/><use href="#toran-flower" x="255" y="22"/><use href="#toran-flower" x="300" y="12"/><use href="#toran-flower" x="345" y="22"/><use href="#toran-flower" x="405" y="36"/><use href="#toran-flower" x="465" y="37"/><use href="#toran-flower" x="525" y="29"/></svg>
+        <div class="section-heading"><p class="eyebrow">Monday, 25 January 2027</p><h2 id="celebration-title">Wedding & <em>reception</em></h2><p>Goel Regency · Pilkhuwa</p></div>
+        <div class="event-grid">
+          <article class="event"><span class="event-number">01 / THE WEDDING</span><svg class="event-icon" viewBox="0 0 120 80" fill="none" aria-hidden="true"><path d="M16 64h88M26 64V30m68 34V30M20 30h80M18 25 60 8l42 17M32 24h56M38 33v10m44-10v10M45 64c-7-8-6-15 1-19 1 10 13 7 14 19 7-6 8-14 5-20 14 7 13 14 8 20" stroke="currentColor" stroke-width="1.5"/><path d="M60 8V2m-8 5h16" stroke="currentColor"/></svg><h3>Shaadi</h3><p class="hindi" lang="hi">शुभ विवाह</p><p>Join us for the wedding ceremony<br>and give us your blessings.</p><p class="event-time" data-time="wedding">Timings to be shared</p></article>
+          <article class="event"><span class="event-number">02 / THE RECEPTION</span><svg class="event-icon" viewBox="0 0 120 80" fill="none" aria-hidden="true"><path d="M25 48q35 37 70 0H25Zm35 19v8m-20 0h40M60 45c-17-9-12-21 0-35 12 14 17 26 0 35Zm0-4c-6-6-5-12 0-17 5 5 6 11 0 17M15 23l6 6-6 6-6-6 6-6Zm90-8 5 5-5 5-5-5 5-5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg><h3>Reception</h3><p class="hindi" lang="hi">प्रीति भोज</p><p>Join us for a meal<br>with our family and friends.</p><p class="event-time" data-time="reception">Timings to be shared</p></article>
+        </div>
+        <div class="celebration-actions"><button class="button button-gold" id="calendar">Save the date <span aria-hidden="true">↗</span></button><p>An all-day reminder · event timings will follow</p></div>
+      </section>
+
+      <section class="anticipation section" aria-labelledby="countdown-title"><p class="eyebrow">Counting the days</p><h2 id="countdown-title">25 January <em>2027</em></h2><p class="countdown"><strong id="days">✧</strong><span id="countdown-label">counting down to 25 January 2027</span></p><p class="small">25 January 2027 · India Standard Time</p></section>
+
+      <section class="sacred-beginning section" aria-labelledby="sacred-title">
+        <figure class="temple-art"><img src="assets/sacred-temple.jpg" alt="A watercolour of Triyuginarayan Temple in the Himalayas, with a sacred fire in the courtyard." width="1536" height="1024" loading="lazy" decoding="async"><figcaption>Triyuginarayan Temple · Uttarakhand</figcaption></figure>
+        <div class="sacred-copy"><span class="sacred-flame" aria-hidden="true">✧</span><p class="eyebrow">Seeking blessings</p><h2 id="sacred-title">For a life of love<br><em>and understanding.</em></h2><p>Triyuginarayan is believed to be the place where Lord Shiva and Goddess Parvati were married. We begin our married life seeking their blessings.</p><a class="heritage-source" href="https://www.incredibleindia.gov.in/en/uttarakhand/kedarnath/triyuginarayan-temple" target="_blank" rel="noopener noreferrer">About the temple ↗</a></div>
+      </section>
+
+      <section class="venue section" id="venue" aria-labelledby="venue-title">
+        <div class="venue-illustration" aria-hidden="true"><div class="venue-arch"><span class="eyebrow">The Tomar & Bais families</span><svg class="kalash-art" viewBox="0 0 260 220" fill="none"><path d="M130 77c-29-27-19-50 0-63 19 13 29 36 0 63Z" fill="#a68152" stroke="#e2c98f"/><path d="M130 71c-37-33-57-24-65-7 26 1 39 6 57 22m8-15c37-33 57-24 65-7-26 1-39 6-57 22m-8-11c-25-34-41-35-54-25 21 9 35 17 44 35m10-10c25-34 41-35 54-25-21 9-35 17-44 35" fill="#87936c" stroke="#e2c98f" stroke-width="1.5"/><path d="M93 87h74l-7 20c40 57 8 89-30 89s-70-32-30-89l-7-20Z" fill="#c3a161" fill-opacity=".17" stroke="#e2c98f" stroke-width="2"/><path d="M98 98h64m-67 35q35 18 70 0m-72 13q37 18 74 0m-66 33q29 12 58 0M91 202h78" stroke="#e2c98f" stroke-width="1.3"/><path d="m130 139 12 17-12 17-12-17 12-17Z" stroke="#e2c98f"/><path d="M33 179q14 17 28 0H33Zm14-4c-9-6-5-13 0-19 5 6 9 13 0 19Zm152 4q14 17 28 0h-28Zm14-4c-9-6-5-13 0-19 5 6 9 13 0 19Z" stroke="#e2c98f" stroke-width="1.5"/></svg><span class="venue-symbol">❦</span></div></div>
+        <div class="venue-copy"><p class="eyebrow">Wedding venue</p><h2 id="venue-title" data-venue-name>Goel Regency</h2><p data-venue-address>Hapur Road, Gandhi Colony<br>Pilkhuwa, Uttar Pradesh 245304</p><p class="venue-note">The wedding and reception will both take place here.</p><div class="venue-actions"><a class="button button-wine" data-map href="https://maps.app.goo.gl/AdNcx3uLKy1AqE5fA?g_st=aw" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a><button class="text-button" id="copy-address">Copy address <span aria-hidden="true">＋</span></button></div><p class="status" id="copy-status" role="status"></p></div>
+      </section>
+
+      <section class="closing section" aria-labelledby="closing-title"><figure class="gathbandhan-art"><img src="assets/gathbandhan.jpg" alt="A watercolour of ivory and wine wedding fabrics tied together on a brass platter, with a few rose petals." width="900" height="600" loading="lazy" decoding="async"></figure><p class="eyebrow">From both our families</p><h2 id="closing-title">We hope you<br><em>can join us.</em></h2><p>We look forward to welcoming you<br>and celebrating together.</p><p class="signature family-signature">With love, both our families</p><button class="text-button" id="share">Share this invitation <span aria-hidden="true">↗</span></button><p class="status" id="share-status" role="status"></p></section>
+    </main>
+    <footer><span aria-hidden="true">❦</span><p>25 January 2027 · Pilkhuwa</p><a href="audio-credits.html" target="_blank" rel="noopener noreferrer">Audio credits ↗</a><a href="#invitation">Back to top ↑</a></footer>
+    <div class="mobile-actions" aria-label="Quick actions"><a href="#celebration">Celebration</a><a href="#venue">Directions</a><button class="music-button" data-music aria-pressed="false"><svg class="sound-mark" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 8h3l4-3v10l-4-3H3V8Zm10-1c2 2 2 4 0 6m2-8c3 3 3 7 0 10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-music-label>Play audio</span></button></div>
+  </div>
+  <audio id="music" src="assets/shankh-mangala-blessings.m4a" preload="metadata"></audio>
+  <noscript><p class="noscript">The invitation is fully readable below. Enable JavaScript for the shankh, spoken blessings and personalized greeting.</p></noscript>
+</body>
+</html>

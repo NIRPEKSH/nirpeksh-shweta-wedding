@@ -1,0 +1,15 @@
+Human recitation: Prathosh A P, Vāgdhenu Sanskrit Chant Corpus.
+Source: https://huggingface.co/datasets/prathoshap/vagdhenu-data
+Original files: style_a/audio/mangala__mangala_1.wav and style_a/audio/mangala__mangala_2.wav.
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+License URL: https://creativecommons.org/licenses/by/4.0/
+Changes: two complete verses selected; volume normalized; a pause added between them; mixed with an original quiet devotional accompaniment; encoded to AAC. Not a voice clone or a claimed endorsement by the reciter.
+
+Conch: Snailhorn.wav by Ohrwurm.
+Source: https://freesound.org/people/Ohrwurm/sounds/64830/
+License: CC0 1.0 / Public Domain.
+Changes: excerpt, reduced volume, fades and AAC conversion.
+
+The musical accompaniment is an original arrangement rendered with built-in macOS instruments. The site's English and Hindi meaning captions are brief original paraphrases, not a complete word-for-word translation.
+
+Playback: the two complete shlokas play once, followed by a separate voice-free original accompaniment. calm-background.m4a is a level-balanced, gently faded AAC render of that original instrumental arrangement.

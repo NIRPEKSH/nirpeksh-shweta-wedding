@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><meta name="theme-color" content="#632d3e"><title>Create a personal invitation · Nirpeksh & Shweta</title><link rel="icon" href="assets/crest.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="personalize.css"><script src="personalize.js" type="module"></script></head>
+<body class="personalize-page"><main class="maker">
+  <a class="maker-back" href="./">← View the invitation</a>
+  <div class="maker-heading"><span class="ornament" aria-hidden="true">❦</span><p class="eyebrow">For family and friends</p><h1>Make a personal<br><em>invitation.</em></h1><p>Enter a guest’s name, create their link,<br>and share it with them.</p></div>
+  <div class="maker-grid">
+    <section class="maker-form" aria-labelledby="create-title"><p class="eyebrow">01 · Make it personal</p><h2 id="create-title">Who are you inviting?</h2>
+      <form id="guest-form"><label for="guest-name">Guest or family name</label><input id="guest-name" name="guest" type="text" maxlength="100" required placeholder="e.g. Kunal or Kunal & family" autocomplete="off" aria-describedby="name-hint"><p class="field-hint" id="name-hint">Use the name exactly as you’d like it to appear. Hindi names work too.</p><button class="button button-wine" id="create-link" type="submit">Create invitation link <span aria-hidden="true">→</span></button></form>
+      <p id="maker-status" class="status" role="status" aria-live="polite"></p>
+      <div id="link-result" class="link-result" hidden><label for="guest-url">Their personal invitation link</label><textarea id="guest-url" rows="4" readonly spellcheck="false"></textarea><div class="result-actions"><button id="copy-link" class="button button-wine" type="button">Copy link <span aria-hidden="true">↗</span></button><a id="open-link" class="text-button" target="_blank" rel="noopener noreferrer">Preview invitation ↗</a></div><p class="field-hint">Ready to share. No publishing step or guest login needed.</p></div>
+    </section>
+    <section class="greeting-preview" aria-labelledby="preview-title"><div class="preview-frame"><p class="eyebrow" id="preview-title">02 · Their welcome</p><p class="sacred" lang="hi">॥ श्री गणेशाय नमः ॥</p><p class="preview-greeting" id="greeting-preview">Dear Kunal</p><div class="fine-rule" aria-hidden="true"><span>✧</span></div><p class="preview-family">The Tomar & Bais families<br>invite you to the wedding and reception.</p><p class="preview-date">25 January 2027<br><span>Goel Regency · Pilkhuwa</span></p></div></section>
+  </div>
+  <p class="script-download"><a href="make-invitation.cjs" download>Download the guest-link script ↗</a></p>
+  <aside class="maker-note"><p>The link hides the name inside a code. Anyone you give the link to can open it and see the greeting.</p><p>Names are processed in your browser. No guest list is uploaded or saved here, so keep a copy of each link you create.</p></aside>
+  <noscript><p class="noscript">Please enable JavaScript to create a personalized link.</p></noscript>
+</main></body></html>

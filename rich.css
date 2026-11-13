@@ -1,0 +1,170 @@
+/* Second edition: blessing-led opening and a richer heritage palette. */
+.cover-music{position:absolute;right:45px;top:30px;z-index:2;font-size:9px;color:var(--wine);gap:7px;background:#faf5ebbf;padding:6px 10px}
+.opening.is-ringing .opening-art{animation:auspicious-light 1.4s ease-out both}
+.opening.is-ringing .bell-button{filter:drop-shadow(0 0 17px #efd18c)}
+.opening.is-ringing .bell-button .bell{animation:sway .16s ease-in-out 6 alternate}
+@keyframes auspicious-light{0%{filter:brightness(1) saturate(1)}55%{filter:brightness(1.15) saturate(1.2)}100%{filter:brightness(1.08) saturate(1.12)}}
+.reveal-effects{position:fixed;inset:0;z-index:130;pointer-events:none;overflow:hidden;display:none}
+.reveal-effects.active{display:block}
+.blessing-ripple{position:absolute;left:var(--bell-x);top:var(--bell-y);width:80px;height:80px;border:1px solid #e0b768;box-shadow:0 0 30px #f2dba655,inset 0 0 25px #f1d69535;border-radius:50%;transform:translate(-50%,-50%);animation:golden-ripple 1.5s var(--delay) ease-out both}
+@keyframes golden-ripple{0%{opacity:0;transform:translate(-50%,-50%) scale(.15)}15%{opacity:.95}100%{opacity:0;transform:translate(-50%,-50%) scale(11)}}
+.blessing-petal{position:absolute;top:-35px;left:var(--x);width:14px;height:21px;border-radius:85% 12% 70% 25%;background:radial-gradient(ellipse at 30% 25%,#e9a998,#a43d57 80%);box-shadow:1px 2px 6px #4a1d3322;animation:petal-blessing var(--duration) var(--delay) ease-in both}
+.petal-1{width:12px;height:19px;background:radial-gradient(ellipse at 30% 25%,#ffe0a3,#c88c32 80%)}
+.petal-2{width:10px;height:17px;background:radial-gradient(ellipse at 30% 25%,#efd0c7,#bd6a7d 85%)}
+.petal-3{width:8px;height:13px;background:radial-gradient(ellipse at 30% 25%,#f3e8b9,#bea15c 85%)}
+@keyframes petal-blessing{0%{opacity:0;transform:translate3d(0,-20px,0) rotate(0)}8%{opacity:.9}83%{opacity:.8}100%{opacity:0;transform:translate3d(var(--drift),110vh,0) rotate(var(--spin))}}
+
+.blessing[hidden]{display:none!important}
+.blessing{position:fixed;inset:0;z-index:110;overflow:auto;isolation:isolate;color:var(--wine);background:#faf2df;outline:none;opacity:0;transition:opacity .65s ease,visibility .65s;min-height:100svh}
+.blessing::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 0 90%,#b58a5033,transparent 45%),radial-gradient(ellipse at 100% 0,#d4ae6c26,transparent 55%),linear-gradient(115deg,#f0dfbe44,transparent 50%)}
+.blessing.is-visible{opacity:1}
+.blessing.dismissed{opacity:0;visibility:hidden;pointer-events:none}
+.blessing-frame{position:absolute;inset:20px;border:1px solid #aa844c80;pointer-events:none;z-index:-1}
+.blessing-frame::before{content:'';position:absolute;inset:5px;border:1px solid #aa844c35}
+.blessing-topline{position:relative;display:flex;align-items:center;justify-content:space-between;padding:36px 5% 0;gap:15px}
+.blessing-topline .eyebrow{font-size:9px;color:#866631}
+.blessing-topline .music-button{font-size:10px;white-space:nowrap;color:var(--wine)}
+.blessing-layout{max-width:1200px;margin:0 auto;min-height:calc(100svh - 110px);display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:6%;padding:35px 5% 55px}
+.ganesh-sanctuary{position:relative;isolation:isolate;text-align:center;padding:20px 0 30px}
+.sanctuary-halo{position:absolute;top:15%;left:7%;right:7%;aspect-ratio:1;border:1px solid #b08b4b44;border-radius:50%;z-index:-1;box-shadow:0 0 75px #d8a54425,inset 0 0 65px #e3bd6d25}
+.sanctuary-halo::before{content:'';position:absolute;inset:14px;border:1px dashed #af8b4540;border-radius:50%}
+.ganesh-art{width:100%;max-width:420px;height:auto;mask-image:radial-gradient(ellipse at center,#000 57%,#000e 65%,transparent 76%);display:block;margin:0 auto;mix-blend-mode:multiply}
+.blessing-mantra{font-family:Georgia,serif;font-size:19px;color:#996e28;margin-top:8px;letter-spacing:.04em}
+.sanctuary-caption{font:italic 22px var(--serif);margin-top:14px;color:var(--wine)}
+.family-invitation{text-align:center;position:relative;padding:25px 0}
+.family-invitation>.eyebrow{color:#947137;font-size:9px}
+.family-invitation h2{font-size:clamp(42px,4.2vw,61px);line-height:1.08;margin:22px 0 0}
+.family-invitation h2>span{font:10px var(--sans);text-transform:uppercase;letter-spacing:.15em;display:block;margin-bottom:24px;line-height:1.8}
+.family-invitation h2 em{color:#93703d}
+.family-invitation .fine-rule{margin:26px auto 21px}
+.blessing-guest{font:italic 25px var(--serif);line-height:1.3;max-width:390px;margin:0 auto 17px;overflow-wrap:anywhere}
+.family-message{font-size:12px;line-height:1.9;max-width:355px;margin:auto;color:#766352}
+.blessing-names{font:40px var(--serif);line-height:1.1;margin:22px auto 15px;white-space:nowrap}
+.blessing-names i{color:var(--gold)}
+.family-date{font-size:9px;letter-spacing:.045em;color:#7c674c;line-height:1.9;margin:0 auto 26px}
+.family-date span{padding:0 7px;color:#a08040}
+.family-invitation>.button{background:var(--wine);border-color:#5d2c3a;color:#fcf2e2;min-width:225px;box-shadow:0 6px 23px #71334917}
+.blessing-footnote{font:italic 19px var(--serif);color:#9a7444;margin-top:21px}
+.music-status{font-size:10px;text-align:center;color:#735142;margin:-33px auto 18px;max-width:80%}
+.blessing.is-visible .ganesh-sanctuary{animation:sanctuary-reveal 1s ease-out both}
+.blessing.is-visible .family-invitation{animation:family-reveal 1s .18s ease-out both}
+@keyframes sanctuary-reveal{from{opacity:0;transform:translateY(15px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes family-reveal{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* The cover stays ivory; the invitation unfolds into wine, sage and saffron. */
+.header{background:#f4ead7;border-bottom-color:#cbb27f}
+.hero{gap:24px;padding-top:24px;background:radial-gradient(ellipse at 5% 100%,#e6ceab55,transparent 65%)}
+.hero-copy{position:relative;isolation:isolate;margin-top:0;background:linear-gradient(145deg,#74344a,#4b2939);color:#faf0df;border:1px solid #b99a61;padding:50px 8% 40px;box-shadow:0 12px 30px #602b3c12}
+.hero-copy::before{content:'';position:absolute;inset:11px;border:1px solid #d9be8550;pointer-events:none;z-index:-1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42' viewBox='0 0 42 42'%3E%3Cpath d='M21 13q3 5 8 8-5 3-8 8-3-5-8-8 5-3 8-8Z' fill='none' stroke='%23d6b379' stroke-opacity='.055'/%3E%3C/svg%3E")}
+.hero-copy .sacred{color:#ddbc77}
+.hero-copy>.eyebrow{color:#dfc695;margin-top:22px}
+.hero-copy .couple{color:#fff4e3}
+.hero-copy .couple small{color:#e2c799}
+.hero-copy .couple>i{color:#d6b376}
+.hero-copy .fine-rule{color:#dfc28b}
+.hero-copy .fine-rule::before,.hero-copy .fine-rule::after{background:#c9a76b66}
+.hero-copy .hero-invite{color:#f5e7d5}
+.hero-copy .hero-date{color:#e5c58b}
+.hero-copy .hero-location{color:#dbc3b7}
+.hero-copy .button{background:#e1c68d;color:#4c2835;border-color:#e1c68d}
+.hero-copy .button:hover{background:#efdaa9}
+.hero-art{margin-top:0;border-color:#bca476;box-shadow:0 10px 30px #8c693314}
+.welcome{position:relative;isolation:isolate;max-width:none!important;background:#e7ecdf;border-top:1px solid #b8c0a266;border-bottom:1px solid #b8c0a266;overflow:hidden;padding:90px 22%!important}
+.welcome::before{content:'';position:absolute;inset:20px;border:1px solid #9caa8360;z-index:-1;pointer-events:none}
+.welcome .eyebrow{color:#5f704f}
+.welcome h2{font-size:clamp(36px,4.2vw,54px);color:#5f2c3d;position:relative}
+.welcome>p:not(.eyebrow,.status){color:#5e6853}
+.welcome-floral{position:absolute;top:0;bottom:0;width:22%;z-index:-1;background:url('assets/heritage.jpg') left bottom/330px auto no-repeat;mix-blend-mode:multiply;opacity:.53;mask-image:linear-gradient(90deg,#000 30%,transparent),linear-gradient(0deg,#000 10%,transparent 90%);mask-composite:intersect}
+.floral-left{left:0}
+.floral-right{right:0;transform:scaleX(-1)}
+.celebration{background:radial-gradient(ellipse at 50% -10%,#8d4259 0%,#632d3e 55%,#4b2a38 100%)}
+.celebration::after{content:'';position:absolute;inset:25px;border:1px solid #b99b6133;pointer-events:none;z-index:-1}
+.event-grid{gap:30px;margin-top:45px}
+.event{border:1px solid #c6a76d66;background:linear-gradient(145deg,#e7cb9411,#f5dfb006);padding:30px 22px;box-shadow:0 10px 35px #24121a14;position:relative}
+.event+.event{border:1px solid #c6a76d66}
+.event::before{content:'✧';display:block;font-size:16px;color:#d8b76d;position:absolute;top:-15px;left:calc(50% - 15px);background:#703347;width:30px}
+.event h3{color:#fff4dd}
+.event-icon{margin-top:18px}
+.anticipation{background:radial-gradient(ellipse at 50% 30%,#f8edd4,transparent 65%),#edd8b1;border-bottom:1px solid #bc9b63;position:relative}
+.anticipation::before,.anticipation::after{content:'❦';position:absolute;color:#b18c4780;font:90px var(--serif);top:39%;line-height:1}
+.anticipation::before{left:7%}.anticipation::after{right:7%;transform:scaleX(-1)}
+.anticipation>.eyebrow{color:#806334}
+.countdown strong{color:#8f6031}
+.countdown span{color:#694530}
+.venue{background:linear-gradient(120deg,#f2e5df,#f3dfd9 65%,#efddd1);border-top:1px solid #b9957133}
+.venue-copy>.eyebrow{color:#95566a}
+.venue-copy>p:not(.eyebrow,.status){color:#75594f}
+.venue-illustration{background:radial-gradient(ellipse at 50% 20%,#fff2cf33,transparent 70%),#4f6452;border:1px solid #b5a06d;box-shadow:0 12px 35px #51413820;min-height:410px;padding-top:45px}
+.venue-arch{color:#e2c98f;border-color:#d6be7f9e;min-height:365px;background:#b8c3a20c}
+.venue-arch .eyebrow{color:#e9d5ab}
+.venue-symbol{color:#d7bc82}
+.closing{background:radial-gradient(ellipse at 50% 100%,#94526666,transparent 65%),#502738;color:#efdfcc;border-top-color:#b89b66}
+.closing .eyebrow{color:#dbbd86}
+.closing h2{color:#fff2dd}
+.closing h2 em{color:#dfbd87}
+.closing>p:not(.eyebrow,.signature,.status){color:#e3cbbf}
+.closing .signature{color:#faebce}
+.closing .text-button{color:#efd8ad;border-color:#a88855}
+.closing .status{color:#e2c8ac}
+footer{background:#f2e7d5;border-top-color:#b5986066}
+
+@media(min-width:1500px){.hero-copy{padding-left:8%;padding-right:8%}.welcome{padding-left:calc((100vw - 800px)/2)!important;padding-right:calc((100vw - 800px)/2)!important}}
+@media(max-width:900px){.hero{gap:16px}.hero-copy{padding-left:20px;padding-right:20px}.blessing-layout{gap:4%;padding-left:6%;padding-right:6%}.family-invitation h2{font-size:45px}.family-message{font-size:11px}.blessing-names{font-size:35px}.welcome{padding:75px 15%!important}.venue-illustration{min-height:350px}.venue-arch{min-height:310px}}
+@media(max-width:600px){
+  .cover-music{top:24px;right:24px;font-size:8px;padding:5px 8px;background:#faf5ebba}
+  .opening .bell-button small{font-size:6.5px;letter-spacing:.055em}
+  .blessing-frame{inset:12px}
+  .blessing-topline{padding:24px 28px 0;gap:10px}
+  .blessing-topline>.eyebrow{font-size:7px;letter-spacing:.1em}
+  .blessing-topline .music-button{font-size:9px}
+  .blessing-layout{display:flex;flex-direction:column;gap:0;min-height:0;padding:6px 30px 30px;max-width:480px}
+  .ganesh-sanctuary{padding:0 0 13px;width:100%;max-width:270px}
+  .ganesh-art{max-width:210px;max-height:210px;object-fit:contain}
+  .sanctuary-halo{top:11%;left:13%;right:13%;box-shadow:0 0 40px #d8a54420}
+  .blessing-mantra{font-size:14px;margin-top:-1px}
+  .sanctuary-caption{font-size:17px;margin-top:7px}
+  .family-invitation{padding:13px 0 0;width:100%}
+  .family-invitation>.eyebrow{font-size:7px;letter-spacing:.17em}
+  .family-invitation h2{font-size:40px;line-height:1.05;margin-top:15px}
+  .family-invitation h2>span{font-size:8px;letter-spacing:.1em;margin-bottom:13px;line-height:1.6}
+  .family-invitation .fine-rule{margin:17px auto 14px;width:110px}
+  .blessing-guest{font-size:21px;margin-bottom:13px;max-width:300px}
+  .family-message{font-size:10px;line-height:1.8;max-width:280px}
+  .blessing-names{font-size:32px;margin:16px auto 12px}
+  .family-date{font-size:8px;max-width:250px;line-height:1.9;margin-bottom:20px}
+  .family-date span{padding:0 4px}
+  .family-invitation>.button{min-height:47px;min-width:225px;padding:11px 21px;font-size:10px}
+  .blessing-footnote{font-size:16px;margin-top:15px}
+  .music-status{font-size:9px;line-height:1.6;margin:0 auto 25px;max-width:75%}
+  .hero{gap:0;padding:16px 0 40px;background:linear-gradient(180deg,#f0e1c8,#faf5eb)}
+  .hero-copy{margin:0 5% 17px;padding:37px 18px 33px}
+  .hero-copy::before{inset:9px}
+  .hero-copy>.eyebrow{font-size:8px;letter-spacing:.16em;margin-top:20px}
+  .hero-copy .couple{gap:8px;width:100%}
+  .hero-copy .couple>span{font-size:clamp(31px,10vw,42px)}
+  .hero-copy .couple>i{font-size:23px}
+  .hero-copy .couple small{font-size:8px}
+  .hero-copy .hero-invite{font-size:21px}
+  .hero-copy .hero-date{font-size:10px}
+  .hero-art{margin:0 5% 17px}
+  .welcome{padding:65px 11%!important}
+  .welcome h2{font-size:37px}
+  .welcome::before{inset:14px}
+  .welcome-floral{width:31%;background-size:260px auto;opacity:.32}
+  .welcome .eyebrow{font-size:7px;letter-spacing:.14em}
+  .event-grid{gap:26px;margin-top:38px}
+  .event,.event+.event{padding:28px 12px 22px}
+  .event::before{background:#723448}
+  .celebration::after{inset:17px}
+  .anticipation::before,.anticipation::after{font-size:53px;top:55%;opacity:.65}
+  .anticipation::before{left:7%}.anticipation::after{right:7%}
+  .anticipation h2{font-size:37px}
+  .venue-illustration{min-height:315px;padding-top:30px}
+  .venue-arch{min-height:280px}
+  .closing{padding-bottom:48px}
+  .closing h2{font-size:38px}
+}
+@media(max-width:360px){.blessing-topline{padding-left:23px;padding-right:23px}.blessing-layout{padding-left:24px;padding-right:24px}.ganesh-art{max-width:205px;max-height:205px}.family-invitation h2{font-size:35px}.blessing-guest{font-size:20px}.blessing-names{font-size:29px}.hero-copy .couple{gap:7px}.hero-copy .hero-invite{font-size:19px}}
+@media(max-height:740px) and (min-width:601px){.blessing-layout{padding-top:8px;padding-bottom:35px;min-height:calc(100svh - 85px)}.ganesh-art{max-width:340px}.family-invitation{padding:8px 0}.family-invitation h2{font-size:45px;margin-top:16px}.family-invitation h2>span{margin-bottom:14px}.family-invitation .fine-rule{margin:20px auto 15px}.blessing-names{font-size:35px;margin:15px auto 13px}.family-date{margin-bottom:20px}.blessing-footnote{margin-top:15px}}
+@media(prefers-reduced-motion:reduce){.reveal-effects{display:none!important}.blessing,.opening{transition:none}.blessing.is-visible .ganesh-sanctuary,.blessing.is-visible .family-invitation{animation:none}.opening.is-ringing .opening-art,.opening.is-ringing .bell{animation:none}}
+@media(max-width:600px){.ganesh-art{max-width:190px;max-height:190px}.family-message{font-size:12px;line-height:1.8}.family-date{font-size:9px}}
