@@ -17,8 +17,9 @@ import { readGuestToken } from './invite-token.js';
   $$('[data-venue-short]').forEach(el => { el.textContent = `${config.venue || 'Venue to be confirmed'} · ${config.city || ''}`; });
   $$('[data-venue-address]').forEach(el => { el.textContent = config.address || 'Address to be added'; });
   $$('[data-map]').forEach(el => { el.href = config.mapsUrl; });
-  $('[data-time="wedding"]').textContent = config.weddingTime || 'Timings to be shared';
-  $('[data-time="reception"]').textContent = config.receptionTime || 'Timings to be shared';
+  $('[data-time="ghurchari"]').textContent = config.ghurchariTime;
+  $('[data-time="baraat"]').textContent = config.baraatDepartureTime;
+  $('[data-wedding-muhurat]').textContent = config.weddingTime ? `Wedding ceremony: ${config.weddingTime} (muhurat).` : config.muhuratNote;
 
   async function loadGuest() {
     const hash = new URLSearchParams(location.hash.slice(1));
@@ -60,7 +61,7 @@ import { readGuestToken } from './invite-token.js';
     const end = new Date(`${config.date}T00:00:00Z`); end.setUTCDate(end.getUTCDate() + 1);
     const endDate = end.toISOString().slice(0, 10).replace(/-/g, '');
     const timestamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
-    const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Nirpeksh and Shweta//Wedding Invitation//EN', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', `UID:nirpeksh-shweta-${date}@wedding.local`, `DTSTAMP:${timestamp}`, `DTSTART;VALUE=DATE:${date}`, `DTEND;VALUE=DATE:${endDate}`, 'SUMMARY:Nirpeksh & Shweta - Wedding and Reception', `LOCATION:${escapeICS(`${config.venue}, ${config.address}`)}`, `DESCRIPTION:${escapeICS(`Wedding and reception. Event timings will be shared by the family. Directions: ${config.mapsUrl}`)}`, 'STATUS:CONFIRMED', 'TRANSP:TRANSPARENT', 'END:VEVENT', 'END:VCALENDAR'];
+    const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Nirpeksh and Shweta//Wedding Invitation//EN', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', `UID:nirpeksh-shweta-${date}@wedding.local`, `DTSTAMP:${timestamp}`, `DTSTART;VALUE=DATE:${date}`, `DTEND;VALUE=DATE:${endDate}`, 'SUMMARY:Nirpeksh & Shweta - Wedding Celebration', `LOCATION:${escapeICS(`${config.venue}, ${config.address}`)}`, `DESCRIPTION:${escapeICS(`All times in India Standard Time.\nGhurchari: ${config.ghurchariTime}.\nDeparture of Baraat: ${config.baraatDepartureTime}.\n${config.weddingTime ? `Wedding ceremony: ${config.weddingTime} (muhurat).` : config.muhuratNote}\nFood and refreshments will be served at the same venue.\nWedding celebration venue: ${config.venue}, ${config.address}.\nDirections: ${config.mapsUrl}`)}`, 'STATUS:CONFIRMED', 'TRANSP:TRANSPARENT', 'END:VEVENT', 'END:VCALENDAR'];
     // RFC 5545 folding at 70 Unicode code points; content here is English ASCII.
     const folded = lines.map(line => line.match(/.{1,70}/gu).join('\r\n ')).join('\r\n') + '\r\n';
     const blob = new Blob([folded], { type: 'text/calendar;charset=utf-8' });
@@ -76,7 +77,7 @@ import { readGuestToken } from './invite-token.js';
   $('#share').addEventListener('click', async () => {
     // Share the public invitation. Personal tokens are deliberately excluded.
     const url = new URL(location.href); url.hash = ''; url.search = '';
-    const data = { title: 'Nirpeksh & Shweta · You’re invited', text: 'Join us for our wedding & reception on 25 January 2027.', url: url.href };
+    const data = { title: 'Nirpeksh & Shweta · You’re invited', text: 'Join us for our wedding celebration on 25 January 2027.', url: url.href };
     try {
       if (navigator.share) { await navigator.share(data); $('#share-status').textContent = 'Thank you for sharing our joy.'; }
       else { await navigator.clipboard.writeText(url.href); $('#share-status').textContent = 'Invitation link copied.'; }

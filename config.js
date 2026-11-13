@@ -5,7 +5,9 @@ window.WEDDING = Object.freeze({
   address: "Hapur Road, Gandhi Colony, Pilkhuwa, Uttar Pradesh 245304",
   city: "Pilkhuwa",
   mapsUrl: "https://maps.app.goo.gl/AdNcx3uLKy1AqE5fA?g_st=aw",
-  weddingTime: "", // Editable placeholder, e.g. a confirmed time + IST. Empty displays “Timings to be shared”.
-  receptionTime: "", // Editable placeholder. Calendar remains all-day until explicitly implemented otherwise.
+  ghurchariTime: "3:00 pm",
+  baraatDepartureTime: "5:00 pm",
+  weddingTime: "", // Exact ceremony start has not been provided.
+  muhuratNote: "The wedding ceremony will take place at the auspicious muhurat.",
   parents: { groom: "", bride: "" } // Reserved optional content; not displayed until provided and approved.
 });
