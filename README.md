@@ -1,5 +1,3 @@
-# Nirpeksh & Shweta
-
 Wedding celebration invitation · 25 January 2027 · Pilkhuwa.
 
 This repository contains the public static website. Guest names are carried in opaque URL fragments; no guest list is stored here.
