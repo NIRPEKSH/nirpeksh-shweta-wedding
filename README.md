@@ -1,4 +1,4 @@
-Wedding celebration invitation · 25 January 2027 · Pilkhuwa.
+Wedding celebration invitation
 
 This repository contains the public static website. Guest names are carried in opaque URL fragments; no guest list is stored here.
 
